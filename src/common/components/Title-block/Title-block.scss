@@ -1,0 +1,26 @@
+@import '../../scss/vars';
+
+.title-block {
+  width: 100%;
+  min-height: 197px;
+  background-color: $general-color;
+  color: #fff;
+  &__title {
+    // font-family: $title-font;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+  }
+  &__content {
+    // font-family: $content-font;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: justify;
+    max-width: 1144px;
+  }
+  &__icons {
+  }
+}
+
+@import '../../scss/media';
