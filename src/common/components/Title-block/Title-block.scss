@@ -1,18 +1,22 @@
 @import '../../scss/vars';
+@import '../../scss/fonts';
 
 .title-block {
   width: 100%;
   min-height: 197px;
   background-color: $general-color;
   color: #fff;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-around;
   &__title {
-    // font-family: $title-font;
+    font-family: $title-font;
     font-weight: bold;
     font-size: 36px;
     line-height: 47px;
   }
   &__content {
-    // font-family: $content-font;
+    font-family: $content-font;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
@@ -20,6 +24,10 @@
     max-width: 1144px;
   }
   &__icons {
+    background-image: url(../../assets/icons/icons-title1.png);
+    width: 436px;
+    height: 136px;
+    float: right;
   }
 }
 

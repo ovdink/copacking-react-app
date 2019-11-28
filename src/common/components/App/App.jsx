@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import AppHeader from '../App-header';
 import VideoBlock from '../Video-block';
 import TitleBlock from '../Title-block';
+import FilterButtons from '../Filter-buttons';
 
 export default class App extends Component {
   state = {};
@@ -13,6 +14,7 @@ export default class App extends Component {
         <AppHeader />
         <VideoBlock />
         <TitleBlock />
+        <FilterButtons />
       </div>
     );
   }
