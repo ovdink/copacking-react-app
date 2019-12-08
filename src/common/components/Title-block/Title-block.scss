@@ -7,14 +7,15 @@
   background-color: $general-color;
   color: #fff;
   display: flex;
-  // flex-wrap: wrap;
   justify-content: space-around;
+
   &__title {
     font-family: $title-font;
     font-weight: bold;
     font-size: 36px;
     line-height: 47px;
   }
+
   &__content {
     font-family: $content-font;
     font-weight: normal;
@@ -23,11 +24,17 @@
     text-align: justify;
     max-width: 1144px;
   }
+
   &__icons {
-    background-image: url(../../assets/icons/icons-title1.png);
-    width: 436px;
-    height: 136px;
-    float: right;
+    background: no-repeat;
+    width: 362px;
+    height: 129px;
+    margin-top: 34px;
+    margin-right: 16px;
+  }
+
+  &-left {
+    padding-top: 34px;
   }
 }
 

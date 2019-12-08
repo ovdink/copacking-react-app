@@ -1,5 +1,49 @@
+@import '../../scss/vars';
+@import '../../scss/fonts';
+
 .filter-buttons {
-    width: 100%;
+  width: 100%;
+  background: #254b68;
+  height: 78px;
+
+  &__button {
+    font-family: $content-font;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    // padding: 1.7rem 2.1875rem;
     height: 78px;
-    background-color: #254B68;
+    width: 126px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+
+    &_active {
+      background: $general-color;
+    }
+    &:hover {
+      background: #396990;
+    }
+  }
+  // &__container {
+  //   width: 81.8125rem;
+  // }
+
+  &__title {
+    font-family: $title-font;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 24px;
+    margin-right: 71px;
+
+    .title-with-butt {
+      display: inline-block;
+      border-bottom: 2px solid #f7941e;
+    }
+  }
 }

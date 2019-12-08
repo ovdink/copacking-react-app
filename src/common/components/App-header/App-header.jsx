@@ -1,9 +1,9 @@
 import React from 'react';
 
 // create new component and add this
-import hamburger from '../../assets/icons/header__menu_test.png';
-import logo from '../../assets/icons/header__logo.png';
-import orderProject from '../../assets/icons/order-project.png';
+import hamburger from 'common/assets/icons/header__menu_test.png';
+import logo from 'common/assets/icons/header__logo.png';
+import orderProject from 'common/assets/icons/order-project.png';
 
 import './App-header.scss';
 
