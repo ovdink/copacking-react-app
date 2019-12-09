@@ -1,18 +1,28 @@
 import cn from "classnames";
-import React from "react";
+import React, { useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import GridCard from "../GridCard";
 import "./GridRow.scss";
 
 const GridRow = ({ cards = [], active, setActive }) => {
     const expander = cards.find(item => item.name === active);
+    const expanderRef = useRef(null);
+    const rowRef = useRef(null);
+
+    const handleToggle = e => {
+        // if (expanderRef.current && !expander) {
+        //     window.scrollTo(0, rowRef.current.offsetTop + 200);
+        // }
+        setActive(e, rowRef);
+    };
+
     return (
         <>
-            <div>
+            <div ref={rowRef}>
                 <TransitionGroup className="row">
                     {cards.map(item => (
                         <CSSTransition
-                            onClick={setActive}
+                            onClick={handleToggle}
                             key={item ? item.name : 0}
                             appear
                             exit
@@ -24,9 +34,9 @@ const GridRow = ({ cards = [], active, setActive }) => {
                     ))}
                 </TransitionGroup>
             </div>
-            <div className={cn("expander", { "open-expander": expander })}>
+            <div ref={expanderRef} className={cn("expander", { "open-expander": expander })}>
                 {expander && expander.name}
-                <div className="closeme" onClick={setActive}>
+                <div className="closeme" onClick={handleToggle}>
                     Х
                 </div>
             </div>

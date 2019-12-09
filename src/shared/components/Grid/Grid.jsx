@@ -58,11 +58,19 @@ const Grid = ({ selectedCards }) => {
         }
     };
 
-    const handleClick = e => {
+    const handleClick = (e, ref) => {
         if (e === activeCard) {
             setActiveCard(null);
         } else {
+            console.log(document.documentElement.scrollTop, ref.current.offsetTop);
+
             setActiveCard(e);
+            if (ref.current && activeCard) {
+                if (document.documentElement.scrollTop < ref.current.offsetTop) {
+                    document.documentElement.scrollTop = ref.current.offsetTop - 300;
+                    // тут короче над правильно пощщитать просто
+                } else document.documentElement.scrollTop = ref.current.offsetTop + 200;
+            }
         }
     };
 
@@ -78,7 +86,7 @@ const Grid = ({ selectedCards }) => {
                                 key={item[0] ? item[0].name : 0}
                                 cards={item}
                                 active={activeCard}
-                                setActive={handleClick}
+                                setActive={(e, ref) => handleClick(e, ref)}
                             />
                         );
                     })}
