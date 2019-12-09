@@ -1,0 +1,161 @@
+@import '../../scss/fonts';
+
+.row {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.expander {
+  height: 550px;
+  transition: 0.3s;
+  background-color: #b9c6d1;
+  width: 100%;
+  max-height: 0;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.open-expander {
+  max-height: 550px;
+  margin-bottom: 20px;
+}
+
+.relative {
+  position: relative;
+
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 24px;
+  margin-bottom: 50px;
+  transition: flex 0.3s ease;
+
+  &__card {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+    width: 560px;
+
+    &__image {
+      width: 100%;
+      height: 350px;
+      margin-bottom: 10px;
+      margin-right: 15px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    &-placeholder_title {
+      position: absolute;
+      width: 100%;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.9);
+      bottom: 12px;
+      text-align: center;
+      padding-top: 10px;
+      font-family: $content-font;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .grid__card {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .grid__card {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+// for placeholder ARROW
+
+.grid__card-placeholder_arrow {
+  position: relative;
+  width: 50px;
+  bottom: 22px;
+  left: 45%;
+}
+
+.left-bar {
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  display: block;
+  transform: rotate(0deg);
+  float: right;
+  border-radius: 2px;
+
+  &:after {
+    content: '';
+    background-color: #acb4ba;
+    width: 45px;
+    height: 2px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all 2s;
+    z-index: -1;
+  }
+}
+
+.right-bar {
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  left: 33px;
+  width: 30px;
+  height: 10px;
+  display: block;
+  transform: rotate(0deg);
+  float: right;
+  border-radius: 2px;
+
+  &:after {
+    content: '';
+    background-color: #acb4ba;
+    width: 45px;
+    height: 2px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all 2s;
+    z-index: -1;
+  }
+}
+
+.open {
+  .left-bar:after {
+    transform-origin: center center;
+    transform: rotate(30deg);
+    background-color: white;
+  }
+
+  .right-bar:after {
+    transform-origin: center center;
+    transform: rotate(-30deg);
+    background-color: white;
+  }
+
+  .card__placeholder {
+    background-color: blue;
+  }
+
+  .placeholder-img__text {
+    color: #fff;
+  }
+}
+
+@import '../../scss/media';

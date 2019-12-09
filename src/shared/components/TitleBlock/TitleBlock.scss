@@ -1,0 +1,41 @@
+@import '../../scss/vars';
+@import '../../scss/fonts';
+
+.title-block {
+  width: 100%;
+  min-height: 197px;
+  background-color: $general-color;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+
+  &__title {
+    font-family: $title-font;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+  }
+
+  &__content {
+    font-family: $content-font;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: justify;
+    max-width: 1144px;
+  }
+
+  &__icons {
+    background: no-repeat;
+    width: 362px;
+    height: 129px;
+    margin-top: 34px;
+    margin-right: 16px;
+  }
+
+  &-left {
+    padding-top: 34px;
+  }
+}
+
+@import '../../scss/media';
