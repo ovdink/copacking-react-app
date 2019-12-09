@@ -1,5 +1,24 @@
 @import '../../scss/fonts';
 
+.row {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.expander {
+  height: 550px;
+  transition: 0.7s;
+  background-color: #b9c6d1;
+  width: 100%;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+.relative {
+  position: relative;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
