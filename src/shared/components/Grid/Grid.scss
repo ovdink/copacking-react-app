@@ -1,4 +1,4 @@
-@import '../../scss/fonts';
+@import "../../scss/fonts";
 
 .row {
   position: relative;
@@ -23,7 +23,6 @@
 
 .relative {
   position: relative;
-
 }
 
 .grid {
@@ -39,6 +38,7 @@
     cursor: pointer;
     position: relative;
     margin-bottom: 10px;
+    margin-right: 18px;
     width: 560px;
 
     &__image {
@@ -64,18 +64,18 @@
   }
 }
 
-@media screen and (max-width: 1366px) {
-  .grid__card {
-    width: 360px;
-  }
-}
+// @media screen and (max-width: 1366px) {
+//   .grid__card {
+//     width: 375px;
+//   }
+// }
 
-@media screen and (max-width: 765px) {
-  .grid__card {
-    width: 100%;
-    margin: auto;
-  }
-}
+// @media screen and (max-width: 765px) {
+//   .grid__card {
+//     width: 100%;
+//     margin: auto;
+//   }
+// }
 
 // for placeholder ARROW
 
@@ -99,7 +99,7 @@
   border-radius: 2px;
 
   &:after {
-    content: '';
+    content: "";
     background-color: #acb4ba;
     width: 45px;
     height: 2px;
@@ -124,7 +124,7 @@
   border-radius: 2px;
 
   &:after {
-    content: '';
+    content: "";
     background-color: #acb4ba;
     width: 45px;
     height: 2px;
@@ -158,4 +158,4 @@
   }
 }
 
-@import '../../scss/media';
+@import "../../scss/media";
