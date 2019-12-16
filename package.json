@@ -11,7 +11,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "react-transition-group": "^4.3.0"
+    "react-transition-group": "^4.3.0",
+    "yandex-map-react": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true
   }
 }

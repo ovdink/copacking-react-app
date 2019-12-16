@@ -1,21 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import { cards } from "../../constants";
-import "../../scss/_container.scss";
-import GridRow from "./components/GridRow";
-import "./components/GridRow/GridRow.scss";
-import "./Grid.scss";
+import React, { useEffect, useRef, useState } from 'react';
 
-const Grid = ({ selectedCards }) => {
+import GridRow from './components/GridRow';
+
+import '../../scss/_container.scss';
+import './components/GridRow/GridRow.scss';
+import './Grid.scss';
+
+const Grid = ({ selectedCards, cards }) => {
+  console.log(cards);
   const gridRef = useRef(null);
   const [activeCard, setActiveCard] = useState();
   const [rowsData, setRowData] = useState(null);
   const [itemsInRow, setItemsInRow] = useState(null);
 
-  const pack = i => {
+  const pack = (i) => {
     const res = [];
     let temp = [];
-    const c = cards.filter(item => {
-      if (selectedCards !== "all") {
+    const c = cards.filter((item) => {
+      if (selectedCards !== 'all') {
         return item.id === selectedCards;
       }
       return true;
@@ -80,7 +82,7 @@ const Grid = ({ selectedCards }) => {
     <div className="container">
       <div className="grid" ref={gridRef}>
         {gridRef.current &&
-          rows.map(item => {
+          rows.map((item) => {
             return (
               <GridRow
                 key={item[0] ? item[0].name : 0}

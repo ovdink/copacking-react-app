@@ -1,4 +1,1 @@
-export {
-    default
-}
-from './FilterButtons';
+export { default } from './FilterButtons';

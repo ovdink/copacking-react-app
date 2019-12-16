@@ -1,0 +1,115 @@
+@import '../../scss/fonts';
+
+.about {
+  width: 100%;
+  height: 400px;
+
+  background: url(../../assets/images/about-background.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__video-screen {
+    width: 563px;
+    height: 248px;
+    background: #c4c4c4;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 75px;
+    margin-right: 10px;
+    position: relative;
+    &__play {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      box-sizing: content-box;
+      display: block;
+      width: 32px;
+      height: 44px;
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 18px 20px 18px 28px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 70px;
+        height: 70px;
+        background: #123046;
+        border-radius: 50%;
+        animation: pulse-border 1500ms ease-out infinite;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 70px;
+        height: 70px;
+        background: #dadada;
+        border-radius: 50%;
+        transition: all 200ms;
+      }
+
+      &:hover:after {
+        background-color: darken(#dadada, 10%);
+      }
+
+      &-arrow {
+        display: block;
+        position: relative;
+        bottom: -8px;
+        right: -2px;
+        z-index: 3;
+        width: 0;
+        height: 0;
+        border-left: 25px solid #818181;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+      }
+    }
+
+    @keyframes pulse-border {
+      0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+      }
+    }
+  }
+
+  &__text-right {
+    max-width: 900px;
+    color: #fff;
+  }
+
+  &__title {
+    font-family: $title-font;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    font-family: $content-font;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: justify;
+    max-width: 1144px;
+    margin-right: 10px;
+  }
+}
