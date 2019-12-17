@@ -898,6 +898,13 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.26"
 
+"@fortawesome/free-brands-svg-icons@^5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.12.0.tgz#b0c78627f811ac030ee0ac88df376567cf74119d"
+  integrity sha512-50uCFzVUki3wfmFmrMNLFhOt8dP6YZ53zwR4dK9FR7Lwq1IVHXnSBb8MtGLe3urLJ2sA+CSu7Pc7s3i6/zLxmA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.26"
+
 "@fortawesome/free-solid-svg-icons@^5.12.0":
   version "5.12.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.12.0.tgz#8decac5844e60453cc0c7c51437d1461df053a35"
@@ -11101,11 +11108,6 @@ yaml@^1.7.2:
   integrity sha512-qXROVp90sb83XtAoqE8bP9RwAkTTZbugRUTm5YeFCBfNRPEp2YzTeqWiz7m5OORHzEvrA/qcGS8hp/E+MMROYw==
   dependencies:
     "@babel/runtime" "^7.6.3"
-
-yandex-map-react@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/yandex-map-react/-/yandex-map-react-1.1.1.tgz#f26ac2f0108c83522e3acc0b0d6ec2794991ad1c"
-  integrity sha512-tl6MI4US+ti9vaGRqJTU1L98mLtjpub1DgIUWDDH9326yBwarxwZ/CU0Jt0p/ElVmF1iGPsQRusijOR3t3Je6Q==
 
 yargs-parser@^11.1.1:
   version "11.1.1"

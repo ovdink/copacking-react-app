@@ -5,8 +5,46 @@
   height: 512px;
   background: #123046;
   color: #fff;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__contact-block {
+    max-width: 225px;
+    margin-right: 50px;
+  }
+
   &__map-block {
     width: 700px;
     height: 325px;
+  }
+}
+
+// Contacts (numbers phone, adress, email...)
+
+.contact-block {
+  &__title {
+    font-family: $title-font;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+
+  &__phones,
+  &__adress,
+  &__email {
+    display: flex;
+    justify-content: space-between;
+    font-family: $content-font;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 30px;
+    position: relative;
   }
 }
