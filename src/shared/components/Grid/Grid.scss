@@ -1,4 +1,4 @@
-@import "../../scss/fonts";
+@import '../../scss/fonts';
 
 .row {
   position: relative;
@@ -99,7 +99,7 @@
   border-radius: 2px;
 
   &:after {
-    content: "";
+    content: '';
     background-color: #acb4ba;
     width: 45px;
     height: 2px;
@@ -124,7 +124,7 @@
   border-radius: 2px;
 
   &:after {
-    content: "";
+    content: '';
     background-color: #acb4ba;
     width: 45px;
     height: 2px;
@@ -158,4 +158,4 @@
   }
 }
 
-@import "../../scss/media";
+@import '../../scss/media';

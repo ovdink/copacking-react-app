@@ -5,10 +5,12 @@ import {
   FilterButtons,
   Grid,
   TitleBlock,
-  VideoBlock
+  VideoBlock,
+  About,
+  Footer
 } from './shared/components';
-import About from './shared/components/About';
-import Footer from './shared/components/Footer';
+// import About from './shared/components/About';
+// import Footer from './shared/components/Footer';
 import { titleData, cardsKeys, cardsOperations } from './shared/constants';
 
 export default class App extends Component {

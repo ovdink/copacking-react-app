@@ -1,4 +1,1 @@
-export {
-    default
-}
-from './GridCard';
+export { default } from './GridCard';
