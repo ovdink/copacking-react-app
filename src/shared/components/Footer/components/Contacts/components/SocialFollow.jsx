@@ -9,19 +9,20 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const SocialFollow = () => {
+  const iconSize = { fontSize: 34 };
   return (
     <div className="contact-block__social-icons">
       <a href="#">
-        <FontAwesomeIcon icon={faYoutube} size="3x" />
+        <FontAwesomeIcon icon={faYoutube} style={iconSize} />
       </a>
       <a href="#">
-        <FontAwesomeIcon icon={faInstagram} size="3x" />
+        <FontAwesomeIcon icon={faInstagram} style={iconSize} />
       </a>
       <a href="#">
-        <FontAwesomeIcon icon={faVk} size="3x" />
+        <FontAwesomeIcon icon={faVk} style={iconSize} />
       </a>
       <a href="#">
-        <FontAwesomeIcon icon={faFacebook} size="3x" />
+        <FontAwesomeIcon icon={faFacebook} style={iconSize} />
       </a>
     </div>
   );

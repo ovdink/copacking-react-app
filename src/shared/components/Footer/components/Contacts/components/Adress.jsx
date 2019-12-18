@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Adress = () => {
   return (
     <div className="contact-block__adress">
       <div className="contact-block__adress-icon">
-        <FontAwesomeIcon icon={faMapMarker} />
+        <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
       </div>
       <div className="contact-block__adress-text">
         <span>117638, Москва,</span>

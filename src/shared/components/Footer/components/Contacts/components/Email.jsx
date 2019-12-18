@@ -6,7 +6,7 @@ const Email = () => {
   return (
     <div className="contact-block__email">
       <div className="contact-block__email-icon">
-        <FontAwesomeIcon icon={faEnvelope} />
+        <FontAwesomeIcon icon={faEnvelope} size="lg" />
       </div>
       <div>info@elikon-design.ru</div>
     </div>

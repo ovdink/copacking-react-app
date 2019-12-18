@@ -7,11 +7,8 @@ const Contacts = () => {
     <>
       <div className="contact-block__title">контакты</div>
       <Phones />
-
       <Adress />
-
       <Email />
-
       <SocialFollow />
     </>
   );
