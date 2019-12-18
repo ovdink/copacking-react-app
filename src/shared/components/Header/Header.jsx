@@ -1,18 +1,19 @@
 import React from 'react';
-import logo from '../../assets/icons/header__logo.png';
-import hamburger from '../../assets/icons/header__menu_test.png';
-import orderProject from '../../assets/icons/order-project.png';
-import './AppHeader.scss';
 
-const AppHeader = () => {
+import HamburgerMenu from './components/HamburgerMenu';
+
+import logo from '../../assets/icons/header__logo.png';
+import orderProject from '../../assets/icons/order-project.png';
+import './Header.scss';
+
+const Header = () => {
   return (
     <header className="header">
-      <div className="header__hamburger">
-        <img src={hamburger} alt="#" />
-        {/* will be single component with styles and call function dynamic modal window (menu)  */}
-      </div>
+      <HamburgerMenu />
       <div className="header__logo">
-        <img src={logo} alt="Logo" />
+        <a href="#">
+          <img src={logo} alt="Logo" />
+        </a>
       </div>
       <div className="header__order-project">
         <img src={orderProject} alt="Logo" />
@@ -22,4 +23,4 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
+export default Header;

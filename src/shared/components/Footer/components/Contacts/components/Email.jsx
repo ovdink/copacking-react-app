@@ -8,7 +8,7 @@ const Email = () => {
       <div className="contact-block__email-icon">
         <FontAwesomeIcon icon={faEnvelope} size="lg" />
       </div>
-      <div>info@elikon-design.ru</div>
+      <a href="mailto:info@elikon-design.ru">info@elikon-design.ru</a>
     </div>
   );
 };

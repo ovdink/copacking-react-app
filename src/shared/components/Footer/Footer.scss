@@ -6,11 +6,25 @@
   background: #123046;
   color: #fff;
   padding-top: 45px;
+  flex-direction: column;
 
   &-top {
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+
+  &-bottom {
+    margin-top: 48px;
+    text-align: center;
+    width: 100%;
+
+    & * {
+      font-family: $content-font;
+      font-size: 18px;
+      line-height: 23px;
+      color: #fff;
+    }
   }
 
   &__contact-block {
@@ -112,6 +126,11 @@
 
   &__email {
     width: 162px;
+
+    & a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
 
   &__social-icons {

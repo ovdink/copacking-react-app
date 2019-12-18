@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.scss';
 import {
-  AppHeader,
+  Header,
+  SlideMenu,
   FilterButtons,
   Grid,
   TitleBlock,
@@ -9,15 +10,15 @@ import {
   About,
   Footer
 } from './shared/components';
-// import About from './shared/components/About';
-// import Footer from './shared/components/Footer';
+
 import { titleData, cardsKeys, cardsOperations } from './shared/constants';
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      selectedTab: 'all'
+      selectedTab: 'all',
+      visibleMenu: false
     };
   }
 
@@ -25,10 +26,13 @@ export default class App extends Component {
     this.setState({ selectedTab: id });
   };
 
+  onVisibleMenu = () => {};
+
   render() {
     return (
       <div className="elikon-app">
-        <AppHeader />
+        <Header />
+        {/* <SlideMenu visible={this.onVisibleMenu} /> */}
         <VideoBlock />
         <TitleBlock titleData={titleData[0]} />
         <FilterButtons

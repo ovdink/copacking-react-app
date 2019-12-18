@@ -1,4 +1,5 @@
-import AppHeader from './AppHeader';
+import Header from './Header';
+import SlideMenu from './SlideMenu';
 import FilterButtons from './FilterButtons';
 import Grid from './Grid';
 import TitleBlock from './TitleBlock';
@@ -7,7 +8,8 @@ import About from './About';
 import Footer from './Footer';
 
 export {
-  AppHeader,
+  Header,
+  SlideMenu,
   FilterButtons,
   Grid,
   TitleBlock,

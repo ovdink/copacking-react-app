@@ -11,15 +11,15 @@
     font-size: 18px;
     line-height: 23px;
     text-align: center;
-    // padding: 1.7rem 2.1875rem;
     height: 78px;
-    width: 126px;
+    width: 128px;
     text-decoration: none;
     outline: none;
     border: none;
     color: #fff;
     background-color: transparent;
     cursor: pointer;
+    transition: 0.1s;
 
     &_active {
       background: $general-color;
@@ -36,7 +36,7 @@
     font-size: 20px;
     line-height: 26px;
     padding-top: 24px;
-    margin-right: 71px;
+    width: 460px;
 
     .title-with-butt {
       display: inline-block;

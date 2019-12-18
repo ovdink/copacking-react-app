@@ -1,0 +1,83 @@
+@import '../../scss/vars';
+
+.header {
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  background-color: $general-color;
+  z-index: 90;
+
+  &__logo,
+  &__order-project,
+  &__hamburger {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__order-project {
+    right: 97px;
+    top: 20px;
+  }
+
+  &__hamburger {
+    left: 97px;
+    top: 22px;
+    width: 32px;
+    height: 22px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    position: relative;
+
+    & span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      background: #fff;
+      opacity: 1;
+      right: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+        width: 100%;
+      }
+      &:nth-child(2) {
+        top: 9px;
+        width: 80%;
+      }
+      &:nth-child(3) {
+        top: 18px;
+        width: 60%;
+      }
+    }
+    &:hover span {
+      width: 100%;
+    }
+  }
+
+  .open span {
+    width: 100%;
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 11px;
+    }
+  }
+
+  &__logo {
+    left: 170px;
+    top: 22px;
+  }
+}
+
+@import '../../scss/media';

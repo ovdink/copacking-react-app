@@ -1,16 +1,15 @@
 import React from 'react';
-
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker
 } from 'react-google-maps';
-import mapStyles from './mapStyles';
 
+import mapStyles from './mapStyles';
 import mapArrow from './icons/map-marker.png';
 
-const Map = () => {
+const GooMap = () => {
   return (
     <GoogleMap
       defaultOptions={{ styles: mapStyles }}
@@ -27,6 +26,21 @@ const Map = () => {
   );
 };
 
-const WrappedMap = withScriptjs(withGoogleMap(Map));
+const WrappedMap = withScriptjs(withGoogleMap(GooMap));
 
-export default WrappedMap;
+const Map = () => {
+  const googleApiUrl =
+    'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=';
+  const googleApiKey = 'AIzaSyCxPeeTRCWUADyEmwwAaDHUIITmgQiR61w';
+
+  return (
+    <WrappedMap
+      googleMapURL={googleApiUrl + googleApiKey}
+      loadingElement={<div style={{ height: `100%` }} />}
+      containerElement={<div style={{ height: `100%` }} />}
+      mapElement={<div style={{ height: `100%` }} />}
+    />
+  );
+};
+
+export default Map;
