@@ -34,7 +34,10 @@ export default class App extends Component {
     return (
       <div className="elikon-app">
         <Header onVisibleMenu={this.onVisibleMenu} />
-        <SlideMenu openMenu={this.state.openMenu} />
+        <SlideMenu
+          openMenu={this.state.openMenu}
+          closeOnScrim={this.onVisibleMenu}
+        />
         <VideoBlock />
         <TitleBlock titleData={titleData[0]} />
         <FilterButtons

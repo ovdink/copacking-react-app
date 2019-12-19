@@ -8,9 +8,9 @@ import './About.scss';
 const About = () => {
   const { title, content } = about;
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="container">
-        <div className="about__video-screen">
+        <div className="about__video-screen" id="about">
           <div className="about__video-screen__play">
             <span className="about__video-screen__play-arrow" />
             {/* click and open modal window on Youtube */}

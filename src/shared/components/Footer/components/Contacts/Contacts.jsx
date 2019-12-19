@@ -5,7 +5,9 @@ import { Phones, Adress, SocialFollow, Email } from './components';
 const Contacts = () => {
   return (
     <>
-      <div className="contact-block__title">контакты</div>
+      <div className="contact-block__title" id="contact">
+        контакты
+      </div>
       <Phones />
       <Adress />
       <Email />

@@ -21,9 +21,16 @@
   z-index: 89;
   background: url('../../assets/images/about-background.jpg');
   padding-top: 165px;
+  box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+  transition: width, 0.2s linear;
 
   &_close {
-    display: none;
+    width: 0;
+    transition: width, 0.2s linear;
+
+    & * {
+      display: none;
+    }
   }
 
   &__container {

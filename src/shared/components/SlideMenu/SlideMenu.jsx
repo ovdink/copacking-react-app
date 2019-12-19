@@ -1,33 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import './SlideMenu.scss';
 
 const Anchors = () => {
   return (
     <>
-      <a className="anchor-link" id="key" href="#">
+      <AnchorLink offset="260" className="anchor-link" href="#key">
         Под ключ
-      </a>
-      <br />
-      <a className="anchor-link" id="operation" href="#">
+      </AnchorLink>
+      <AnchorLink offset="260" className="anchor-link" href="#key">
         Простые операции
-      </a>
-      <br />
-      <a className="anchor-link" id="about" href="#">
+      </AnchorLink>
+      <AnchorLink offset="64" className="anchor-link" href="#about">
         О компании
-      </a>
-      <br />
-      <a className="anchor-link" id="contact" href="#">
+      </AnchorLink>
+      <AnchorLink offset="64" className="anchor-link" href="#contact">
         Контакты
-      </a>
+      </AnchorLink>
     </>
   );
 };
 
-const SlideMenu = ({ openMenu }) => {
+const SlideMenu = ({ openMenu, closeOnScrim }) => {
   return (
     <>
-      <div className={`scrim ${!openMenu ? `scrim_close` : null}`}></div>
+      <div
+        className={`scrim ${!openMenu ? `scrim_close` : null}`}
+        // onClick={() => {
+        //   closeOnScrim();
+        // }}
+      ></div>
       <div className={`slide-menu ${!openMenu ? `slide-menu_close` : null}`}>
         <div className="slide-menu__container">
           <Anchors />

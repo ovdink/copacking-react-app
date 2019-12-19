@@ -6,7 +6,7 @@ import './FilterButtons.scss';
 
 const FilterButtons = ({ onFilterChangeId, selectedTabId }) => {
   return (
-    <div className="filter-buttons">
+    <div className="filter-buttons" id="key">
       <div className="container">
         <div className="filter-buttons__title">
           <div className="title-with-butt">Выберите отрасль&nbsp;</div>

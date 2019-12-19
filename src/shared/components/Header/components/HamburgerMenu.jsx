@@ -8,13 +8,12 @@ export default class HamburgerMenu extends Component {
     };
   }
 
-  toggleModalMenu(e) {
-    e.preventDefault();
+  toggleModalMenu() {
+    const newState = !this.state.open;
     this.setState({
-      open: !this.state.open
+      open: newState
     });
-    this.props.onClickMenu(this.state.open);
-    console.log(this.state.open);
+    this.props.onClickMenu(newState);
   }
 
   render() {
@@ -22,7 +21,7 @@ export default class HamburgerMenu extends Component {
     return (
       <div
         className={`header__hamburger ${open ? `open` : null} `}
-        onClick={(e) => this.toggleModalMenu(e)}
+        onClick={() => this.toggleModalMenu()}
       >
         <span></span>
         <span></span>
