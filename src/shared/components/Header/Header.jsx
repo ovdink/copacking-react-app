@@ -6,10 +6,10 @@ import logo from '../../assets/icons/header__logo.png';
 import orderProject from '../../assets/icons/order-project.png';
 import './Header.scss';
 
-const Header = () => {
+const Header = ({ onVisibleMenu }) => {
   return (
     <header className="header">
-      <HamburgerMenu />
+      <HamburgerMenu onClickMenu={onVisibleMenu} />
       <div className="header__logo">
         <a href="#">
           <img src={logo} alt="Logo" />

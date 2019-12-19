@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 
 export default class HamburgerMenu extends Component {
-  state = {
-    open: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
 
   toggleModalMenu(e) {
     e.preventDefault();
     this.setState({
       open: !this.state.open
     });
+    this.props.onClickMenu(this.state.open);
     console.log(this.state.open);
   }
 

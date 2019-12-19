@@ -18,7 +18,7 @@ export default class App extends Component {
     super();
     this.state = {
       selectedTab: 'all',
-      visibleMenu: false
+      openMenu: false
     };
   }
 
@@ -26,13 +26,15 @@ export default class App extends Component {
     this.setState({ selectedTab: id });
   };
 
-  onVisibleMenu = () => {};
+  onVisibleMenu = (show) => {
+    this.setState({ openMenu: show });
+  };
 
   render() {
     return (
       <div className="elikon-app">
-        <Header />
-        {/* <SlideMenu visible={this.onVisibleMenu} /> */}
+        <Header onVisibleMenu={this.onVisibleMenu} />
+        <SlideMenu openMenu={this.state.openMenu} />
         <VideoBlock />
         <TitleBlock titleData={titleData[0]} />
         <FilterButtons

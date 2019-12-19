@@ -1,20 +1,30 @@
 @import '../../scss/fonts';
 
 .scrim {
+  display: block;
   width: 100%;
   height: 100vh;
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   z-index: 88;
+
+  &_close {
+    display: none;
+  }
 }
 
 .slide-menu {
+  display: block;
   height: 100vh;
   width: 512px;
   position: fixed;
   z-index: 89;
   background: url('../../assets/images/about-background.jpg');
   padding-top: 165px;
+
+  &_close {
+    display: none;
+  }
 
   &__container {
     width: 275px;
