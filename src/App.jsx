@@ -3,6 +3,7 @@ import './App.scss';
 import {
   Header,
   SlideMenu,
+  OrderModalWindow,
   FilterButtons,
   Grid,
   TitleBlock,
@@ -18,7 +19,8 @@ export default class App extends Component {
     super();
     this.state = {
       selectedTab: 'all',
-      openMenu: false
+      openMenu: false,
+      openOrderWindow: false
     };
   }
 
@@ -30,13 +32,24 @@ export default class App extends Component {
     this.setState({ openMenu: show });
   };
 
+  onVisibleOrderWindow = (show) => {
+    this.setState({ openOrderWindow: show });
+  };
+
   render() {
     return (
       <div className="elikon-app">
-        <Header onVisibleMenu={this.onVisibleMenu} />
+        <Header
+          onVisibleMenu={this.onVisibleMenu}
+          onVisibleOrderWindow={this.onVisibleOrderWindow}
+        />
         <SlideMenu
           openMenu={this.state.openMenu}
-          closeOnScrim={this.onVisibleMenu}
+          // closeOnScrim={this.onVisibleMenu}
+        />
+        <OrderModalWindow
+          openOrderWindow={this.state.openOrderWindow}
+          closeOrderWindow={this.onVisibleOrderWindow}
         />
         <VideoBlock />
         <TitleBlock titleData={titleData[0]} />

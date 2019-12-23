@@ -6,7 +6,11 @@ import logo from '../../assets/icons/header__logo.png';
 import orderProject from '../../assets/icons/order-project.png';
 import './Header.scss';
 
-const Header = ({ onVisibleMenu }) => {
+const Header = ({ onVisibleMenu, onVisibleOrderWindow }) => {
+  const eventShowWindow = () => {
+    onVisibleOrderWindow(true);
+  };
+
   return (
     <header className="header">
       <HamburgerMenu onClickMenu={onVisibleMenu} />
@@ -15,9 +19,8 @@ const Header = ({ onVisibleMenu }) => {
           <img src={logo} alt="Logo" />
         </a>
       </div>
-      <div className="header__order-project">
+      <div className="header__order-project" onClick={eventShowWindow}>
         <img src={orderProject} alt="Logo" />
-        {/* modal window with inputs/button for order */}
       </div>
     </header>
   );

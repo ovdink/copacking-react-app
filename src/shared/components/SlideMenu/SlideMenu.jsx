@@ -25,12 +25,7 @@ const Anchors = () => {
 const SlideMenu = ({ openMenu, closeOnScrim }) => {
   return (
     <>
-      <div
-        className={`scrim ${!openMenu ? `scrim_close` : null}`}
-        // onClick={() => {
-        //   closeOnScrim();
-        // }}
-      ></div>
+      <div className={`scrim ${!openMenu ? `scrim_close` : null}`}></div>
       <div className={`slide-menu ${!openMenu ? `slide-menu_close` : null}`}>
         <div className="slide-menu__container">
           <Anchors />
