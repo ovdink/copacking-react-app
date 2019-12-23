@@ -10,11 +10,12 @@ const OrderModalWindow = ({ openOrderWindow, closeOrderWindow }) => {
   };
 
   return (
-    <div
-      className={`order-scrim ${openOrderWindow ? null : 'close'} `}
-      onClick={onCloseOrderWindow}
-    >
-      <div className="order-window">
+    <>
+      <div
+        className={`order-scrim ${openOrderWindow ? null : 'close'} `}
+        onClick={onCloseOrderWindow}
+      ></div>
+      <div className={`order-window ${openOrderWindow ? null : 'close'}`}>
         <div className="order-window__close-cross">
           <img src={cross} alt="#" onClick={onCloseOrderWindow} />
         </div>
@@ -31,6 +32,12 @@ const OrderModalWindow = ({ openOrderWindow, closeOrderWindow }) => {
           placeholder=" E-mail *"
         />
         <br />
+        <input
+          className="order-window__company"
+          type="text"
+          placeholder=" Компания"
+        />
+        <br />
         <textarea
           className="order-window__message"
           cols="48"
@@ -42,7 +49,7 @@ const OrderModalWindow = ({ openOrderWindow, closeOrderWindow }) => {
         </div>
         <button className="order-window__btn-send">отправить</button>
       </div>
-    </div>
+    </>
   );
 };
 
