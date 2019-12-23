@@ -1,14 +1,24 @@
 import React from 'react';
 import './VideoBlock.scss';
+import video from '../../assets/video-background/test.mp4';
 
 const VideoBlock = () => {
   return (
-    <section className="background-video">
-      <div className="background-video__play">
-        <span className="background-video__play-arrow" />
+    <section className="video-block">
+      <video
+        className="video-block__video"
+        autoPlay
+        muted
+        loop
+        style={{ objectFit: 'cover' }}
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+      <div className="video-block__play">
+        <span className="video-block__play-arrow" />
         {/* click and open modal window on Youtube */}
       </div>
-      <div className="background-video__scroller" />
+      <div className="video-block__scroller" />
     </section>
   );
 };

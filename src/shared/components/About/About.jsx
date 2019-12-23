@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { about } from '../../constants/';
+import video from '../../assets/video-background/test1.mp4';
 
 import '../../scss/_container.scss';
 import './About.scss';
@@ -10,7 +11,17 @@ const About = () => {
   return (
     <div className="about" id="about">
       <div className="container">
-        <div className="about__video-screen" id="about">
+        <div className="about__video-container">
+          <video
+            className="about__video-screen"
+            id="about"
+            autoPlay
+            muted
+            loop
+            style={{ objectFit: 'cover' }}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
           <div className="about__video-screen__play">
             <span className="about__video-screen__play-arrow" />
             {/* click and open modal window on Youtube */}

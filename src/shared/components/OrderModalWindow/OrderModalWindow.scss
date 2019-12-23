@@ -48,8 +48,9 @@
     height: 135px;
     width: 79.5%;
     resize: none;
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 5px;
+    font-family: $content-font;
   }
 
   &__recaptcha {
